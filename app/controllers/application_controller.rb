@@ -18,4 +18,12 @@ class App < Sinatra::Base
     end
 
 
+  get '/' do
+    erb :super_hero
+  end
+  
+  post '/heroes' do
+    @hero = Hero.new(params[:hero])
+  end
 end
+
